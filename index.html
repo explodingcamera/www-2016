@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>explodingcamera.com</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <style media="screen">
+    body {
+      background-color: black;
+      font-family: raleway;
+      margin: 3em;
+      color: white;
+      white-space: no-wrap;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      padding-top: 20px;
+      font-size: 2.2rem;
+      margin: 0;
+      font-weight: 200;
+    }
+    ul {
+      margin: 0;
+      padding-left: 5px;
+      list-style-type: none;
+      line-height: 1.4rem;
+      font-size: 1.3rem;
+    }
+    i {
+      color: white;
+    }
+    a {
+      padding-left: 10px;
+      color: #909090;
+      text-decoration: none;
+      transition: color 0.6s;
+    }
+    a:hover, span:hover {
+      color: white !important;
+    }
+    span {
+      transition: color 0.6s;
+      color: #424242;
+    }
+    
+    .glitch {
+      color: white;
+      position: relative;
+      width: 400px;
+      max-width: 90vw;
+    }
+    
+    @keyframes noise-anim {
+      0% {
+        clip: rect(19px, 9999px, 81px, 0);
+      }
+      5% {
+        clip: rect(3px, 9999px, 30px, 0);
+      }
+      10% {
+        clip: rect(97px, 9999px, 99px, 0);
+      }
+      15% {
+        clip: rect(98px, 9999px, 4px, 0);
+      }
+      20% {
+        clip: rect(45px, 9999px, 4px, 0);
+      }
+      25% {
+        clip: rect(27px, 9999px, 27px, 0);
+      }
+      30% {
+        clip: rect(48px, 9999px, 36px, 0);
+      }
+      35% {
+        clip: rect(91px, 9999px, 23px, 0);
+      }
+      40% {
+        clip: rect(35px, 9999px, 37px, 0);
+      }
+      45% {
+        clip: rect(63px, 9999px, 33px, 0);
+      }
+      50% {
+        clip: rect(36px, 9999px, 30px, 0);
+      }
+      55% {
+        clip: rect(73px, 9999px, 78px, 0);
+      }
+      60% {
+        clip: rect(60px, 9999px, 23px, 0);
+      }
+      65% {
+        clip: rect(25px, 9999px, 61px, 0);
+      }
+      70% {
+        clip: rect(86px, 9999px, 14px, 0);
+      }
+      75% {
+        clip: rect(9px, 9999px, 41px, 0);
+      }
+      80% {
+        clip: rect(99px, 9999px, 27px, 0);
+      }
+      85% {
+        clip: rect(79px, 9999px, 74px, 0);
+      }
+      90% {
+        clip: rect(72px, 9999px, 8px, 0);
+      }
+      95% {
+        clip: rect(41px, 9999px, 73px, 0);
+      }
+      100% {
+        clip: rect(100px, 9999px, 10px, 0);
+      }
+    }
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -3px 0 red;
+      top: 0;
+      color: white;
+      background: black;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+    
+    @keyframes noise-anim-2 {
+      0% {
+        clip: rect(97px, 9999px, 23px, 0);
+      }
+      5% {
+        clip: rect(26px, 9999px, 95px, 0);
+      }
+      10% {
+        clip: rect(97px, 9999px, 81px, 0);
+      }
+      15% {
+        clip: rect(81px, 9999px, 65px, 0);
+      }
+      20% {
+        clip: rect(84px, 9999px, 8px, 0);
+      }
+      25% {
+        clip: rect(7px, 9999px, 46px, 0);
+      }
+      30% {
+        clip: rect(58px, 9999px, 51px, 0);
+      }
+      35% {
+        clip: rect(21px, 9999px, 51px, 0);
+      }
+      40% {
+        clip: rect(71px, 9999px, 10px, 0);
+      }
+      45% {
+        clip: rect(58px, 9999px, 59px, 0);
+      }
+      50% {
+        clip: rect(8px, 9999px, 89px, 0);
+      }
+      55% {
+        clip: rect(23px, 9999px, 86px, 0);
+      }
+      60% {
+        clip: rect(34px, 9999px, 68px, 0);
+      }
+      65% {
+        clip: rect(15px, 9999px, 60px, 0);
+      }
+      70% {
+        clip: rect(3px, 9999px, 55px, 0);
+      }
+      75% {
+        clip: rect(14px, 9999px, 49px, 0);
+      }
+      80% {
+        clip: rect(22px, 9999px, 51px, 0);
+      }
+      85% {
+        clip: rect(31px, 9999px, 65px, 0);
+      }
+      90% {
+        clip: rect(41px, 9999px, 90px, 0);
+      }
+      95% {
+        clip: rect(57px, 9999px, 50px, 0);
+      }
+      100% {
+        clip: rect(41px, 9999px, 6px, 0);
+      }
+    }
+    .glitch:before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 4px 0 blue;
+      top: 0;
+      color: white;
+      background: black;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+    
+     @media (max-width:800px) { 
+       h1 {
+      font-size: 3em;
+      }
+    }
+    
+     @media (max-width:560px) { 
+       h1 {
+      font-size: 2em;
+      }
+    }
+    
+     @media (max-width:500px) { 
+       body {
+         margin: 2em
+       }
+    }
+    </style>
+  </head>
+  <body>
+    <h1><div class="glitch" data-text="explodingcamera.com">explodingcamera.com</div></h1>
+    <div class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:mail@henrygressmann.de">mail@explodingcamera.com</a></li>
+        <li><i class="fa fa-twitter" aria-hidden="true"></i>
+          <a href="https://twitter.com/explodingcamera">Twitter: <span>@explodingcamera</span></a></li>
+        <li><i class="fa fa-github" aria-hidden="true"></i>
+          <a href="https://github.com/explodingcamera">Github: <span>/henr-y</span></a></li>
+        <li><i class="fa fa-key" aria-hidden="true"></i>
+          <a href="https://keybase.io/explodingcamera">Keybase.io: <span>@explodingcamera</span></a></li>
+        <li><i class="fa fa-codepen" aria-hidden="true"></i>
+          <a href="https://codepen.io/explodingcamera">codepen.io: <span>/explodingcamera</span></a></li>
+      </ul>
+      <h2>Projects</h2>
+      <ul>
+        <li><i class="fa fa-terminal" aria-hidden="true"></i>
+          <a href="https://github.com/henr-y/projects">Open Source Projects</a></li>
+        <li><i class="fa fa-globe" aria-hidden="true"></i>
+          <a href="https://markusgressmann.de">MarkusGressmann.de</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
